@@ -1,0 +1,198 @@
+{
+    "version": 1,
+    "author": "Harshu",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 0,
+            "left": 0,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot",
+            "top": -130,
+            "left": -150,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-dht22",
+            "id": "dht",
+            "top": -140,
+            "left": 90,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-pir-motion-sensor",
+            "id": "pir",
+            "top": -140,
+            "left": 230,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led",
+            "id": "ledPump",
+            "top": 230,
+            "left": -120,
+            "attrs": {
+                "color": "blue",
+                "label": "PUMP"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "ledGreen",
+            "top": 230,
+            "left": -50,
+            "attrs": {
+                "color": "green",
+                "label": "NORMAL"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "ledRed",
+            "top": 230,
+            "left": 20,
+            "attrs": {
+                "color": "red",
+                "label": "ALERT"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "laser",
+            "top": 230,
+            "left": 90,
+            "attrs": {
+                "color": "orange",
+                "label": "LASER"
+            }
+        },
+        {
+            "type": "wokwi-buzzer",
+            "id": "buzzer",
+            "top": 230,
+            "left": 170,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "pot:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "pot:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "pot:SIG",
+            "esp:34",
+            "green",
+            []
+        ],
+        [
+            "dht:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "dht:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "dht:SDA",
+            "esp:15",
+            "green",
+            []
+        ],
+        [
+            "pir:VCC",
+            "esp:5V",
+            "red",
+            []
+        ],
+        [
+            "pir:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "pir:OUT",
+            "esp:27",
+            "green",
+            []
+        ],
+        [
+            "ledPump:A",
+            "esp:26",
+            "blue",
+            []
+        ],
+        [
+            "ledPump:C",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "ledGreen:A",
+            "esp:25",
+            "green",
+            []
+        ],
+        [
+            "ledGreen:C",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "ledRed:A",
+            "esp:33",
+            "red",
+            []
+        ],
+        [
+            "ledRed:C",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "laser:A",
+            "esp:4",
+            "orange",
+            []
+        ],
+        [
+            "laser:C",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "buzzer:2",
+            "esp:32",
+            "purple",
+            []
+        ],
+        [
+            "buzzer:1",
+            "esp:GND.1",
+            "black",
+            []
+        ]
+    ]
+}

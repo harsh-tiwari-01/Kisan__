@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Kissan__",
+			"path": "."
+		}
+	],
+	"settings": {
+		"stm32cube-ide-clangd.path": "cube"
+	}
+}
